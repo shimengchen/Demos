@@ -1,0 +1,12 @@
+.column1 {
+    height: 300px;
+    margin:-20px 0;
+    background-color: red;
+}
+
+.column2 {
+   
+    height: 300px;
+    margin:-40px 0;
+    background-color: purple;
+}

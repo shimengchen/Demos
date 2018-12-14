@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="../build/react.js"></script>
+    <script src="../build/react-dom.js"></script>
+    <script src="../build/browser.min.js"></script>
+</head>
+
+<body>
+    <div id="example"></div>
+    <script type="text/babel">
+        class Welcome extends React.Component{ 
+            render(){ 
+                return <h1>Hello,{this.props.name}</h1>; 
+                } 
+                } 
+                
+        Welcome.defaultProps={
+            name:'yamy'
+        };
+        function App(){
+            return (
+                <div>
+                <Welcome/>
+                <Welcome name="wjj"/>
+                <Welcome name="xts"/>
+                </div>
+                );
+        }
+        ReactDOM.render(<App/>,document.getElementById('example'));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta charset="UTF-8">
+<title></title>
+<style>
+#out{
+width: 400px;
+height:400px;
+background-color:yellow;
+}
+
+#in{
+width: 200px;
+height:200px;
+background-color:red;
+
+}
+</style>
+</head>
+<body>
+
+<div id="out">
+<div id="in"></div>
+</div>
+
+</body>
+<script>
+var out=document.getElementById("out");
+var inner=document.getElementById("in");
+
+true&&(out.addEventListener("click",function(e){
+console.log("我在外面");
+console.log(e.target);
+console.log(e.currentTarget);
+},false));
+
+false&&(inner.addEventListener("click",function(e){
+console.log("冒泡了");
+console.log(e.target);
+console.log(e.currentTarget);
+
+},false));
+</script></html>

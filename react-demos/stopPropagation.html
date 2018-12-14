@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Page Title</title>
+    <script>
+        window.onload=function(){
+            var btn=document.getElementById("btn");
+            btn.onclick=function(event){
+                alert("clicked me");
+                var ev=event?event:window.event;
+                ev.stopPropagation();
+            }
+
+            document.body.onclick=function(){
+                alert("clicked body");
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="button" id="btn" value="click me!">
+</body>
+</html>
