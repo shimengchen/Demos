@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="../build/react.js"></script>
+    <script src="../build/react-dom.js"></script>
+    <script src="../build/browser.min.js"></script>
+</head>
+
+<body>
+    <div id="example"></div>
+    <script type="text/babel">
+        var App = React.createClass({
+    getInitialState: function() {
+      return {userInput: ''};
+    },
+    handleChange: function(e) {
+      this.setState({userInput: e.target.value});
+    },
+    clearAndFocusInput: function() {
+      this.setState({userInput: ''}); // 设置值为空字符串t
+      if(this.refs.myInput!=null){
+       this.refs.myInput.focus();         //这里想要实现获得焦点     
+      }
+    },
+    render: function() {
+      return (
+        <div>
+          <input ref="myInput"
+            value={this.state.userInput}
+            onChange={this.handleChange}
+          />
+                    <input type="button"
+                      value="Reset And Focus"
+                      onClick={this.clearAndFocusInput}
+               />
+        </div>
+      );
+    }
+  });
+
+  ReactDOM.render(<App/>,document.getElementById('example'));
+    </script>
+</body>
+
+</html>

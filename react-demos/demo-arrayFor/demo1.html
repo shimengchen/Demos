@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <script>
+        //localStorage 存值永久有效  
+function set_item()  
+{  
+    var user = {};  
+    user.name = 'Gideon Liang';  
+    user.age  = 32;  
+    user.home = 'USA';  
+    localStorage.setItem('userinfo',JSON.stringify(user));  
+}  
+  
+//localStorage取值  
+function get_item(){  
+    var data = JSON.parse(localStorage.getItem('userinfo'));  
+    alert("name:"+data.name+"\r age:"+data.age+"\r home:"+data.home);  
+}  
+  
+//localStorage删除指定键对应的值  
+function delete_item(){  
+    localStorage.removeItem('userinfo');  
+    alert(localStorage.getItem('userinfo'));  
+}  
+    </script>
+</head>
+
+<body>
+        <input type='button' onclick='set_item()' value='存值'　/>  
+        <input type='button' onclick='get_item()' value='取值'　/>  
+        <input type='button' onclick='delete_item()' value='删除'　/>  
+</body>
+
+</html>

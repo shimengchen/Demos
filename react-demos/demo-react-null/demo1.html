@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="../build/react.js"></script>
+    <script src="../build/react-dom.js"></script>
+    <script src="../build/browser.min.js"></script>
+    <style>
+        button {
+  height: 40px;
+  width: 200px;
+}
+.warning {
+  background-color: red;
+  text-align: center;
+  width: 100%;
+  padding: 10px;
+
+  font-size: 14pt;
+  color: white;
+}
+    </style>
+</head>
+
+<body>
+    <div id="example"></div>
+    <script type="text/babel">
+       function Warning(props){
+           if(props.warn){
+               return null;
+           }else{
+               return <div className="warning">警告！</div>;
+           }
+       }
+       class Page extends React.Component{
+           constructor(props) {
+               super(props);
+               this.state={isHiddened:false};
+               this.onHiddenClick=this.onHiddenClick.bind(this);
+            }
+            
+               onHiddenClick(){
+                   this.setState(
+                       (prevState)=>({isHiddened:!prevState.isHiddened})
+                   );
+               }
+               render(){
+                   const isHiddened=this.state.isHiddened;
+
+                   return (
+                       <div>
+                       <Warning warn={isHiddened}/>
+                       <button onClick={this.onHiddenClick}>{isHiddened?"显示":"隐藏"}</button>
+                       </div>
+                   );
+           }
+       }
+
+       ReactDOM.render(<Page/>,document.getElementById('example'));
+    </script>
+</body>
+
+</html>

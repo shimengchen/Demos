@@ -1,0 +1,15 @@
+.container {
+    background: #eee;
+    width: 600px;
+    height: 1000px;
+    margin: 0 auto;
+}
+
+.sticky-box{
+    position: -webkit-sticky;
+    position: sticky;
+    height:100px;
+    margin-bottom: 50px;
+    background-color: green;
+    top:0px;
+}

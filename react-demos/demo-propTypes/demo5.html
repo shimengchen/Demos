@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="../build/react.js"></script>
+    <script src="../build/react-dom.js"></script>
+    <script src="../build/browser.min.js"></script>
+    <script src="https://cdn.staticfile.org/prop-types/15.6.1/prop-types.js"></script>
+</head>
+
+<body>
+    <div id="example"></div>
+    <script type="text/babel">
+    var title="123";
+    class MyTitle extends React.Component{
+        render(){
+            return <h1>hello,{this.props.title}</h1>;
+        }
+    }
+    MyTitle.propTypes={
+        title:React.PropTypes.string
+    };
+    ReactDOM.render(<MyTitle title={title}/>,document.getElementById('example'));
+    </script>
+</body>
+
+</html>
+
