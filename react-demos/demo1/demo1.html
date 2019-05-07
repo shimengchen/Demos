@@ -2,22 +2,59 @@
 <html>
 
 <head>
-    <script src="../build/react.js"></script>
-    <script src="../build/react-dom.js"></script>
-    <script src="../build/browser.min.js"></script>
+    <script>
+    </script>
+    <style>
+        body{
+            background: url('299.JPG');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .rest{
+            width: 300px;
+            position:relative;
+            line-height: 20px;
+            max-height: 40px;
+            overflow: hidden; 
+        }
+        .rest::after{
+            content:"...";
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            padding-left: 40px;
+            background: -webkit-linear-gradient(left, transparent, #fff 55%);
+    background: -o-linear-gradient(right, transparent, #fff 55%);
+    background: -moz-linear-gradient(right, transparent, #fff 55%);
+    background: linear-gradient(to right, transparent, #fff 55%);
+        }
+        .wrap{
+            display: flex;
+        }
+        .left,.right{
+            height: 200px;
+        }
+        .left{
+            width: 200px;
+            background-color: aqua;
+        }
+        .right{
+            flex:1;
+            background-color: blueviolet;
+        }
+    </style>
 </head>
 
 <body>
-    <div id="example"></div>
-    <script type="text/babel">
-        function tick(){ const element=(
-        <div>
-            <h1>Hello,world</h1>
-            <h2>It is {new Date().toLocaleTimeString()}.</h2>
+    <div class="wrap">
+    <div class="left">
+        <div class="rest">anknkankkjxknnjlkkllnlnkxnl,anx,nNxnlnxknkxnlkipojoi898698068tjgfanknkankkjxknnjlkkllnlnkxnl,anx,nNxnlanknkankkjxkn
+            njlkkllnlnkxnl,anx,nNxnlanknkankkjxknnjlkkllnlnkxnl,anx,nNxnlanknkankkjxknnjlkkllnlnkxnl,anx,nNxnlanknkankkjxknnjlkkllnlnkxnl,anx,nNxnlanknkankkjxknnjlkkllnlnkxnl,anx,nNxnlanknkankkjxknnjlkkllnlnkxnl,anx,nNxnlanknkankkjxknnjlkkllnlnkxnl,anx,nNxnlanknkankkjxknnjlkkllnlnkxnl,anx,nNxnlanknkankkjxknnjlkkllnlnkxnl,anx,nNxnlanknkankkjxknnjlkkllnlnkxnl,anx,nNxnl6g9hihkp0888888hjbb</div>
         </div>
-        ); ReactDOM.render(element,document.getElementById('example')); } 
-        setInterval(tick, 1000);
-    </script>
+        <div class="right">
+            yebucuo
+        </div>
+    </div>
 </body>
 
 </html>
